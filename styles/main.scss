@@ -1,48 +1,68 @@
-@import './vendor/normalize';
-@import './partials/colors';
-@import './partials/typography';
-@import './partials/mixin';
-header {
-    height: 100px;
-    width: 100%;
+@import 'partials/base';
+
+nav {
     display: flex;
-    justify-content: flex-start;
-h1 {
-padding-top: 30px;
-font-size: 1rem;
+    justify-content: space-around;
 }
-    nav{ 
-        ul {
-            display: flex;
-            li {
-                list-style: none;
-                padding-top: 25px;
-                padding-left: 15px;
-                a {
-                    text-decoration: none;
-                    
-                }
-            }
+
+
+.hero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+}
+
+.hero-content{ 
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.sidebar {
+    background-color: white;
+
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .hero-content {
+        h1 {
+            font-size: 4em;
+
         }
     }
-}
 
-main {
-    text-align: center;
-    min-height: 100px;
-    width: 100%;
+    .main-container {
+        display: flex;
+        
+    }
 
-    .card {
-        margin: auto;
-        width: 80%;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        @include border-radius();
-      }
-      
-      /* Add rounded corners to the top left and the top right corner of the image */
-      img {
-        border-radius: 5px 5px 0 0;
-      }
+    .post {
+        width: 50%;
+
+    }
+
+    .sidebar {
+        width: 50%;
+
+    }
+
+    .mixed-layout {
+        display: flex;
+    }
+
+    .first {
+        width: 50%;
+
+    }
+    .second {
+        width: 50%;
+        display: flex;
+        flex-flow: column wrap;
+    }
 }
 
